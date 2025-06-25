@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>AnimeZone</title>
+  </head>
+  <body>
+    <header>
+      <div id="header-container"></div>
+    </header>
+    <main>
+      <!--Banner-->
+      <section class="banner">
+        <figure>
+          <img src="#" alt="Banner" />
+        </figure>
+      </section>
+      <!--Carrossel destaque-->
+      <section>
+        <hr />
+        <h2>Destaques</h2>
+        <hr />
+        <div class="carousel-container">
+          <button class="prev-button" aria-label="Voltar carrossel">
+            &#10094;
+          </button>
+          <div class="carousel-wrapper">
+            <div class="carousel-track">
+              <!-- Slides criados no JS -->
+            </div>
+          </div>
+          <button class="next-button" aria-label="Avançar carrossel">
+            &#10095;
+          </button>
+          </div>
+          <hr class="preenchimento"/>
+      </section>
+    </main>
+    <footer>
+      <div id="footer-container"></div>
+    </footer>
+  
+    <!-- Carregar header e footer -->
+    <script>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then(
+          (data) =>
+            (document.getElementById("footer-container").innerHTML = data)
+        );
+    </script>
+    <p class="mensagem-oculta">
+      Este projeto foi feito por alguem que continuou mesmo quando ninguém acreditava. AnimeZone é mais do que código - é minha prova de resistência.
+    </p>
+      <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

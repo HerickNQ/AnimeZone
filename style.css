@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --cor-roxo: #8511b3;
+  --cor-cabecalho: rgb(15, 15, 26);
+  --cor-fundo: gray;
+  --cor-texto: antiquewhite;
+  --cor-destque-cabecalho: rgba(0, 0, 0, 0.8);
+  --cor-submenu: rgba(24, 24, 48, 1);
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", "Cabin", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  display: flex;
+  flex-direction: column;
+}
+/* Estilo Cabeçalho*/
+header {
+  background-color: var(--cor-cabecalho);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+a {
+  text-decoration: none;
+  color: var(--cor-texto);
+}
+.logotipo {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+  margin-left: 0.2rem;
+}
+.logotipocor {
+  color: var(--cor-roxo);
+}
+.logotipo:hover {
+  cursor: pointer;
+  background-color: var(--cor-destque-cabecalho);
+  border-radius: 8px;
+  transform: scale(1.1);
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  max-width: calc(100vw - 150px);
+  margin-right: 1rem;
+}
+ul,
+li {
+  list-style: none;
+}
+nav ul li {
+  position: relative;
+}
+nav > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  text-align: center;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--cor-submenu);
+  z-index: 101;
+  min-width: 150px;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  text-align: center;
+}
+nav .menu-item .submenu li a {
+  cursor: pointer;
+}
+.menu-item:hover,
+.menu-item:hover > a {
+  color: var(--cor-roxo);
+  cursor: pointer;
+}
+nav .menu-item .submenu li a:hover {
+  background-color: var(--cor-destque-cabecalho);
+  color: var(--cor-roxo);
+  border-radius: 5px;
+}
+nav > ul {
+  font-size: large;
+  margin-right: 1rem;
+}
+input[type="search"] {
+  font-size: large;
+  outline: none;
+  border-radius: 10px;
+}
+input::placeholder {
+  font-size: small;
+  color: var(--cor-submenu);
+  font-weight: bold;
+}
+button {
+  font-size: large;
+  justify-content: space-between;
+  border-radius: 20px;
+  background-color: transparent;
+  color: var(--cor-texto);
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+  color: var(--cor-roxo);
+}
+.login-cadastro {
+  padding-left: 1.5rem;
+}
+.fa-caret-down {
+  transition: transform 0.3s ease;
+}
+.fa-caret-down.rotated {
+  transform: rotate(180deg);
+}
+/* Fim Cabeçalho*/
+/* Banner */
+/* provisorio*/
+.banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(15, 4, 56);
+  color: white;
+}
+/*fim provisorio*/
+img {
+  width: 100%;
+  min-height: 150px;
+  object-fit: cover;
+}
+/*Fim Banner*/
+h2 {
+  text-align: center;
+  background-color: var(--cor-cabecalho);
+}
+/*Carrosel */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  height: auto;
+  min-height: 250px;
+  max-height: 100%;
+  overflow: hidden;
+  background: var(--cor-cabecalho);
+  padding: 20px 0;
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 350px;
+  overflow-y: hidden;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+.carousel-slide {
+  position: relative;
+  flex: 0 0 auto;
+  width: 150px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 10px;
+}
+.slide-content {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.slide-content img {
+  width: 100%;
+  height: 250px;
+  display: block;
+  object-fit: cover;
+}
+/* Texto sobre a imagem */
+.slide-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: var(--cor-destque-cabecalho);
+  color: var(--cor-texto);
+  padding: 6px 8px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  box-sizing: border-box;
+  word-break: break-word;
+  max-height: 3.4rem;
+}
+/* Efeito hover na imagem */
+.slide-content:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  border-radius: 8px;
+}
+.slide-content:hover .slide-title {
+  color: var(--cor-roxo);
+} /*efeito hover fim*/
+/*botões*/
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: var(--cor-cabecalho);
+  border: none;
+  color: var(--cor-texto);
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+}
+.prev-button {
+  left: 0;
+}
+.next-button {
+  right: 0;
+}
+/*fim botões*/
+/*icone favoritos*/
+.favorite-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 22px;
+  color: var(--cor-texto);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 10;
+}
+.favorite-icon.favorited {
+  color: var(--cor-roxo);
+}
+/*fim favoritos*/
+/*Fim carrossel*/
+
+/*pagina favoritos*/
+.texto-favoritos {
+  text-align: center;
+  margin: 2rem 0;
+}
+#favoritos-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+.favoritos {
+  background-color: var(--cor-submenu);
+}
+/*fim pagina favoritos*/
+/* rodape*/
+footer {
+  text-align: center;
+  font-size: small;
+  padding: 1rem;
+}
+/*fim rodape*/
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+.menu-toggle:hover {
+  color: var(--cor-roxo);
+  transform: scale(1.2);
+}
+.preenchimento {
+  height: 10px;
+  background-color: var(--cor-destque-cabecalho);
+  width: 100%;
+  border: none;
+}
+.mensagem-oculta {
+  display: none;
+}
+/*telas menores*/
+@media (max-width: 1100px) {
+      #favoritos-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  /*header*/
+  header {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    max-width: 100vw;
+  }
+  nav {
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  nav > ul {
+    flex: 1;
+    min-width: 12rem;
+    flex-direction: column;
+    background-color: var(--cor-cabecalho);
+    position: absolute;
+    top: 100%;
+    display: none !important;
+    gap: 0;
+    text-align: left;
+    padding: 1.5rem;
+    border-radius: 8px;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  nav > ul.show {
+    display: flex !important;
+    flex-direction: column;
+  }
+  nav ul li a {
+    color: var(--cor-texto);
+  }
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--cor-texto);
+    margin-left: 1rem;
+  }
+  nav > ul li {
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+  }
+  .submenu {
+    display: none;
+  }
+  nav .submenu {
+    display: none;
+  }
+  input[type="search"] {
+    width: 80%;
+  }
+  .busca {
+    width: 100%;
+  }
+  .busca button {
+    font-size: 1rem;
+  }
+  .login-cadastro {
+    width: 100%;
+  }
+  .login-cadastro button {
+    font-size: 1rem;
+  }
+  /*fim header*/
+  .carousel-slide {
+    width: 120px;
+    height: 240px;
+  }
+  .carousel-wrapper {
+    height: 260px;
+  }
+  .slide-title {
+    font-size: 12px;
+    min-height: auto;
+  }
+  .slide-content img {
+    max-height: 200px;
+  }
+  /*fim carrossel*/
+  /*banner*/
+  .banner {
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+  /*fim banner*/
+}
+@media (max-width: 768px) {
+  #favoritos-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 568px) {
+  #favoritos-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  #favoritos-container {
+    grid-template-columns: 1fr;
+  }
+  /*carrosel*/
+  .carousel-slide {
+    width: 100px;
+    height: 150px;
+  }
+  .slide-content img {
+    max-height: 180px;
+  }
+  .slide-title {
+    font-size: 12px;
+    max-height: none;
+  }
+  .carousel-wrapper {
+    height: 180px;
+  }
+  .prev-button,
+  .next-button {
+    font-size: 20px;
+    padding: 6px;
+  }
+  /*fim carrossel*/
+}

@@ -1,0 +1,119 @@
+[
+    {
+        "id": 1,
+        "titulo": "Demon Slayer",
+        "imagem": "./assets/img/demon-slayer.jpg",
+        "genero": [
+            "Ação",
+            "Fantasia"
+        ],
+        "dublado": true,
+        "legendado": true,
+        "favorito": false,
+        "audio": "./assets/audio/demon-slayer.mp3",
+        "url": "detalhes.html?anime=demon-slayer",
+        "temporada": "Outono",
+        "ano": 2019,
+        "studio": ["Ufotable"],
+        "episodios": {
+            "temporada_1": 26,
+            "temporada_2": 11,
+            "temporada_3": 11,
+            "temporada_4": "será lançada"
+        },
+        "filmes": [
+            {
+                "titulo": "Mugen Train",
+                "duracao": "1h 57min",
+                "ano": 2020,
+                "url": "filme.html?filme=mugen-train",
+                "trailer": "https://www.youtube.com/embed/VQGCKyvzIM4",
+                "imagem": "./assets/img/demon-slayer-mugen-train.jpg",
+                "diretor": "Haruo Sotozaki"
+            }
+        ],
+        "classificacao": "13+",
+        "trailer": "https://www.youtube.com/embed/VQGCKyvzIM4?si=S99KfPaqmo2WVmty",
+        "slug": "demon-slayer",
+        "personagens": [
+            "Tanjiro",
+            "Nezuko",
+            "Zenitsu",
+            "Inosuke"
+        ],
+        "nota": 8.7,
+        "status": "Em andamento",
+        "estreia": "06/04/2019",
+        "origem": "Mangá",
+        "duracao_media": "24min",
+        "diretores": {
+            "temporada_1": "Haruo Sotozaki",
+            "temporada_2": "Haruo Sotozaki",
+            "temporada_3": "Kazuya Nakanishi"
+        },
+        "tags": [
+            "Demônios",
+            "Espadas",
+            "Shounen",
+            "Nezuko"
+        ],
+        "idioma_original": "Japonês",
+        "sinopse": "Tanjiro Kamado luta contra demônios para salvar sua irmã Nezuko e vingar sua família.",
+        "recomendados": []
+    },
+    {
+        "id": 2,
+        "titulo": "Diário de uma Apotecária",
+        "imagem": "./assets/img/diario-apotecaria.png",
+        "genero": [
+            "Mistério",
+            "Histórico",
+            "Drama",
+            "Romance",
+            "Slice of Life"
+        ],
+        "dublado": true,
+        "legendado": true,
+        "favorito": false,
+        "audio": null,
+        "url": "detalhes.html?anime=diario-apotecaria",
+        "temporada": "Outono",
+        "ano": 2023,
+        "studio": [
+            "Madhouse"
+        ],
+        "produtora": ["Toho Animation", "OLM"],
+        "episodios": {
+            "temporada_1": 24,
+            "temporada_2": 24
+        },
+        "diretores": {
+            "temporada_1": "Nohiro Naguma",
+            "temporada_2": "Akinori Fudesaka"
+        },
+        "classificacao": "13+",
+        "trailer": "https://www.youtube.com/embed/XYNGkSvFT8c?si=qnun_9LISBjUiBYZ",
+        "slug": "diario-apotecaria",
+        "personagens": [
+            "Maomao",
+            "Jinshi"
+        ],
+        "nota": 7.8,
+        "status": "Em andamento",
+        "estreia": "21/10/2023",
+        "origem": {
+            "light_novel": "Natsu Hyūga",
+            "ilustrador": "Touko Shino",
+            "publicação": "Shōsetsuka ni Narō (2011), Shufunotomo (2014)"
+        },
+        "duracao_media": "24min",
+        "tags": [
+            "Mistério",
+            "Histórico",
+            "Drama"
+        ],
+        "idioma_original": "Japonês",
+        "sinopse": "Maomao, uma jovem apotecária, resolve mistérios no palácio imperial enquanto se protege de perigos.",
+        "recomendados": []
+    }
+]
